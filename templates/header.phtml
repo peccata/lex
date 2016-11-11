@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8">
+      <meta name="robots" content="none">
+      <title>Lex Pro - Надежные юристы в Томске</title>
+      <meta name="description" content="Lex Pro - Надежные юристы в Томске">
+      <meta name="keywords" content="юрист, томск, гражданское право">
+      <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <meta name="format-detection" content="telephone=no">
+      <meta http-equiv="x-rim-auto-match" content="none">
+
+      <!-- Main stylesheet -->
+      <link rel="stylesheet" href="/css/theme.css">
+
+      <!-- Additional -->
+      <!-- <link rel="stylesheet" href="/css/pages-additional.min.css">
+      <script type="text/javascript" src="/js/pages-additional.min.js"></script> -->
+
+      <!--  jQuery 1.7+  -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+      <!-- Slick -->
+      <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+      <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
+
+
+      <script type="text/javascript">
+      $(document).ready(function() {
+
+        $(".header-slider").slick({
+          prevArrow: '<i class="fa fa-chevron-circle-left fa-3x slick-prev" aria-hidden="true"></i>',
+          nextArrow: '<i class="fa fa-chevron-circle-right fa-3x slick-next" aria-hidden="true"></i>',
+        });
+      });
+      </script>
+  </head>
+  <body>
+    <header role="banner" class="header">
+      <div class="header-panel table">
+        <a href="/" class="td panel-left-container">
+          <img src="/img/logo-flat.png">
+          <div>
+            <div class="company-name">ЛЕКС ПРО</div>
+            <div class="company-desc">Знаем. Умеем. Защищаем.</div>
+          </div>
+        </a>
+        <div class="td panel-right-container">
+          <div class="right-container-inner">
+            <div class="company-phone">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle-o fa-stack-2x"></i>
+                <i class="fa fa-phone fa-stack-1x" aria-hidden="true"></i>
+              </span>
+              <div><a href="tel:+7 (3822) 250-200">250-200</a></div>
+            </div>
+            <div class="company-address">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle-o fa-stack-2x"></i>
+                <i class="fa fa-map-marker fa-stack-1x" aria-hidden="true"></i>
+              </span>
+              <p>Россия, г. Томск, ул.Советская, 69</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <?php
+      // move it to some config
+        $pages = [
+          "Главная" => "/",
+          "О нас" => "/about",
+          "Услуги" => "/services",
+        //  "Новости" => "/news",
+          "Контакты" => "/contacts",
+          "Обратная связь" => "/feedback",
+        ];
+      ?>
+
+      <div class="header-inner <?= '/' == $currentPath ? '' : 'not-main' ?>">
+        <div class="top-background" style="background: url(/img/image.jpg) 50% 50% no-repeat; background-size: cover;"></div>
+        <div class="header-container <?= '/' == $currentPath ? '' : 'header-container-in' ?> resp clear-self">
+          <div class="menu-header-wrapper clear-self">
+            <a href="#" class="menu-header-title">Меню</a>
+            <div class="menu-header-dropdown">
+              <div class="dropdown-exit"></div>
+              <div class="clear"></div>
+              <div class="menu-header-inner">
+                <ul class="menu-header">
+                  <?php foreach ($pages as $page => $path): ?>
+                    <li class="<?= $path == $currentPath ? 'opened active' : ''; ?>"><a href="<?= $path; ?>"><?= $page; ?></a>
+                  <?php endforeach; ?>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <?php if ('/' == $currentPath) : ?>
+        <div class="header-slider">
+          <div class="item"  style="background: url(/img/image.jpg) 50% 50% no-repeat; background-size: cover;">
+            <div class="item-inner"><p>15 лет опыта защиты в судах<br />и на переговорах</p></div>
+          </div>
+          <div class="item"  style="background: url(/img/s-image-2.jpg) 50% 50% no-repeat; background-size: cover;">
+            <div class="item-inner"><p>Высшее юридическое образование и дополнительные специальные знания.</p></div>
+          </div>
+          <div class="item"  style="background: url(/img/s-image-3.jpg) 50% 50% no-repeat; background-size: cover;">
+            <div class="item-inner"><p>Методика профессиональной медиации.</p></div>
+          </div>
+        </div>
+      <?php endif; ?>
+
+    </header>
+    <div class="site-wrapper">

@@ -1,0 +1,44 @@
+<?php var_dump($messages); ?>
+
+<div class="content-wrapper clear-self">
+
+  <main role="main" class="main">
+    <div class="content">
+      <div class="content-inner">
+
+        <h1>Обратная связь</h1>
+
+        <div class="s3_form">
+          <form method="post" action="/send" class="-visor-no-click">
+            <div class="feedback-left-container">
+              <div class="row">
+                <label for="d[0]" class="row-title">Как Вас зовут? <span style="color:red">*</span></label><br>
+                <label class="row-text"><input type="text" maxlength="100" value="" name="d[0]" id="d[0]"></label>
+              </div>
+
+              <div class="row">
+                <label for="d[1]" class="row-title">Телефон (с кодом города): <span style="color:red">*</span></label><br>
+                <label class="row-text"><input data-validator="phone" type="text" maxlength="100" value="" name="d[1]" id="d[1]"></label>
+              </div>
+
+              <div class="row">
+                <label for="d[2]" class="row-title">Ваш E-Mail: <span style="color:red">*</span></label><br>
+                <label class="row-text"><input data-validator="email" type="text" maxlength="100" value="" name="d[2]" id="d[2]"></label>
+              </div>
+            </div>
+
+            <div class="feedback-right-container">
+              <div class="row">
+                <label for="d[3]" class="row-title">Ваш комментарий: <span style="color:red">*</span></label><br><label class="row-text"><textarea rows="1" name="d[3]" id="d[3]"></textarea></label>
+              </div>
+              <div class="row-button"><button type="submit" value="Отправить">Отправить</button></div>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div> <!-- .content-inner -->
+    </div> <!-- .content -->
+  </main> <!-- .main -->
+</div>
