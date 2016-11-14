@@ -13,27 +13,15 @@
       <!-- Main stylesheet -->
       <link rel="stylesheet" href="/css/theme.css">
 
-      <!-- Additional -->
-      <!-- <link rel="stylesheet" href="/css/pages-additional.min.css">
-      <script type="text/javascript" src="/js/pages-additional.min.js"></script> -->
-
-      <!--  jQuery 1.7+  -->
+      <!--  jQuery  -->
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
       <!-- Slick -->
       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
       <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
-
-      <script type="text/javascript">
-      $(document).ready(function() {
-
-        $(".header-slider").slick({
-          prevArrow: '<i class="fa fa-chevron-circle-left fa-3x slick-prev" aria-hidden="true"></i>',
-          nextArrow: '<i class="fa fa-chevron-circle-right fa-3x slick-next" aria-hidden="true"></i>',
-        });
-      });
-      </script>
+      <!-- Main js -->
+      <script src="/js/main.js" charset="utf-8"></script>
   </head>
   <body>
     <header role="banner" class="header">
@@ -81,9 +69,9 @@
         <div class="top-background" style="background: url(/img/image.jpg) 50% 50% no-repeat; background-size: cover;"></div>
         <div class="header-container <?= '/' == $currentPath ? '' : 'header-container-in' ?> resp clear-self">
           <div class="menu-header-wrapper clear-self">
-            <a href="#" class="menu-header-title">Меню</a>
+            <a href="#" class="menu-header-title"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></a>
             <div class="menu-header-dropdown">
-              <div class="dropdown-exit"></div>
+              <div class="dropdown-exit"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
               <div class="clear"></div>
               <div class="menu-header-inner">
                 <ul class="menu-header">

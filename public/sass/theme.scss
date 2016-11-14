@@ -382,6 +382,7 @@ a[href^="tel:"] {
 
 .panel-right-container {
   padding: 0 24px 0 20px;
+  font-size: 0;
   text-align: right;
   background-color: $primary-color-light;
   .right-container-inner {
@@ -401,6 +402,10 @@ a[href^="tel:"] {
   }
   i {
     color: $primary-color-middle;
+  }
+  .fa-lg {
+    font-size: 21px;
+    margin-right: 10px;
   }
 }
 
@@ -422,11 +427,11 @@ a[href^="tel:"] {
 .company-address {
   min-height: 32px;
   padding: 3px 11px 3px 48px;
-  font-size: 1rem;
   font-weight: 400;
   line-height: 32px;
   max-width: 315px; }
   .company-address > p {
+    font-size: 1rem;
     display: inline-block;
     vertical-align: middle;
     line-height: 1.1;
@@ -488,6 +493,10 @@ a[href^="tel:"] {
   position: relative;
   z-index: 100;
   text-align: center; }
+
+.dropdown-exit {
+  display: none;
+}
 
 @media all and (min-width: 769px) {
   .menu-header-title {
@@ -1185,7 +1194,7 @@ a[href^="tel:"] {
   float: right; }
   .header-container.respons .menu-header-title {
     position: relative;
-    color: #15c;
+    color: $primary-color-dark;
     font-weight: 500;
     text-decoration: none;
     line-height: 1;
@@ -1194,8 +1203,9 @@ a[href^="tel:"] {
     display: inline-block;
     vertical-align: top;
     margin-left: 10px;
-    padding: 12px 44px 12px 20px;
-    background-color: #fff; }
+    // padding: 12px 44px 12px 20px;
+    // background-color: #fff;
+  }
   .header-container.respons .menu-header-title::after {
     position: absolute;
     right: 20px;
@@ -1236,10 +1246,11 @@ a[href^="tel:"] {
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out; }
   .header-container.respons .dropdown-exit {
+    display: block;
     float: right;
     cursor: pointer;
-    width: 50px;
-    height: 50px; }
+    padding: 5px 10px;
+    color: $primary-color-middle; }
   .header-container.respons .menu-header {
     margin: 0;
     padding: 0 20px 50px;
@@ -1316,7 +1327,7 @@ a[href^="tel:"] {
       float: right; }
     .menu-header-title {
       position: relative;
-      color: #15c;
+      color: $primary-color-dark;
       font-weight: 500;
       text-decoration: none;
       line-height: 1;
@@ -1325,8 +1336,9 @@ a[href^="tel:"] {
       display: inline-block;
       vertical-align: top;
       margin-left: 10px;
-      padding: 12px 44px 12px 20px;
-      background-color: #fff; }
+      // padding: 12px 44px 12px 20px;
+      // background-color: #fff;
+    }
     .menu-header-title::after {
       position: absolute;
       right: 20px;
@@ -1367,10 +1379,11 @@ a[href^="tel:"] {
       -ms-transition: all 0.3s ease-in-out;
       transition: all 0.3s ease-in-out; }
     .dropdown-exit {
+      display: block;
       float: right;
       cursor: pointer;
-      width: 50px;
-      height: 50px; }
+      padding: 5px 10px;
+      color: $primary-color-middle; }
     .menu-header {
       margin: 0;
       padding: 0 20px 50px;
@@ -1462,9 +1475,9 @@ a[href^="tel:"] {
     display: none; }
 
   .header-container.respons .menu-header-title, .menu-header-title {
-    font-size: 0;
-    line-height: 0;
-    height: 40px;
+    // font-size: 0;
+    // line-height: 0;
+    // height: 40px;
     width: 40px;
     padding: 0;
     background: none; }
